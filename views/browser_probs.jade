@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    .wrapper
+        #container
+            h1 
+                 a(href='/') DuckDuckStart
+            h2 Having issues?
+            hr
+            h3 "This web page is being redirected to a new location. Would you like to resend the form data you have typed to the new location?"
+            p In Firefox and other similar browsers there may be a security warning displayed every time a search is performed. While this is annoying, it is safe to click 'Ok' and follow the redirect. Your browser is simply redirecting the search to Startpage.com.
+            p If you are using Firefox and would like to avoid seeing this message every time you do a search you can simple toggle <strong>network.http.prompt-temp-redirect</strong> in <em>about:config</em> to <strong><em>false</em></strong>.
+            p 
+            p <br />
+            p <em>Please note:</em> As of Firefox 40(?), this is now the default and the above step shouldn't be needed anymore.
+
+        .push
+    include footer

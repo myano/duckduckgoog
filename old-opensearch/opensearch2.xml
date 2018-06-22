@@ -8,14 +8,12 @@
     <AdultContent>false</AdultContent>
     <Language>en-us</Language>
     <Developer>Yanovich</Developer>
-    <Contact>webmaster@duckduckstart.com</Contact>
+    <Contact>duckduckstart@yanovich.net</Contact>
     <Tags>duckduckgo startpage search</Tags>
     <Attribution>DuckDuckGo and Startpage</Attribution>
     <SyndicationRight>open</SyndicationRight>
     <Query role="example" searchTerms="Apple !i"/>
     <Image height="16" width="16" type="image/x-icon">https://duckduckstart.com/favicon.ico</Image>
-    <Url type="text/html" rel="results" template="https://duckduckstart.com/" method="POST">
-        <Param name="query" value="{searchTerms}" method="POST"/>
-    </Url>
-    <Url type="application/opensearchdescription+xml" rel="self" template="https://duckduckstart.com/opensearch.xml"/>
+    <Url type="text/html" method="GET" template="https://duckduckstart.com/new?q={searchTerms}"/>
+    <Url type="application/opensearchdescription+xml" rel="self" template="https://duckduckstart.com/opensearch2.xml" />
 </OpenSearchDescription>

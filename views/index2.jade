@@ -1,0 +1,22 @@
+extends layout
+
+
+block content
+    main(class="mdl-layout__content")
+        .page-content
+            #search-container
+                #search-middle
+                    #search-content
+                        br()
+                        h1 DuckDuckStart
+                        form#search-form(method='POST', action='/')
+                            .mdl-textfield.mdl-js-textfield
+                                input(type='text', class="mdl-textfield__input", id='search-input', name='query', required, placeholder='Whatcha looking for?', label="search query")
+                                br()
+                                button(class="mdl-button mdl-button--raised mdl-button--colored", type='submit', style="margin-top:35px;margin-bottom:-35px;position:relative;") Search
+                        br()
+                        span Searches <a href="https://startpage.com/" target="_blank" rel="noopener">Startpage</a> and <a href="https://duckduckgo.com/bang" target="_blank" rel="noopener">!bangs</a> <a href="https://duckduckgo.com/" target="_blank" rel="noopener">DuckDuckGo</a>.
+                        br()
+                        br()
+                        span <a href="/browser">Tell your browser</a>!
+                        // p Why do I get an annoying prompt in certain browsers? We have some <a href="/browser_probs">Known Solutions</a>!

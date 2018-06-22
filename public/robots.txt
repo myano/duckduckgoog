@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /logs
+Disallow: /logs.py
+Disallow: /qes.csv
+Disallow: /reqs.csv
+Disallow: /traffic
+Disallow: /traffic.html
+
+Sitemap: https://duckduckstart.com/sitemap.xml

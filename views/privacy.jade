@@ -1,12 +1,32 @@
 extends layout
 
 block content
-  #container
-    h1 DuckDuckGoog
-    h2 Privacy Policy
-    p It's quite simple. DuckDuckGoog doesn't track any queries submitted whatsoever, It simply redirects you to DuckDuckGo or Google depending on whether your search contains a !bang or not. 
-    p The source code for this is available 
-      a(href='https://github.com/mikecrittenden/duckduckgoog/blob/master/app.js#L22') here on GitHub
-      |  so you're free to take a look or even host your own version if you'd like.
-    p If you have any questions, feel free to 
-      a(href="mailto:mikecrittenden@gmail.com") email me.
+    .wrapper
+        #container
+            h1 DuckDuckStart
+            h2 Privacy Policy
+            p It's quite simple. DuckDuckStart doesn't track any queries submitted whatsoever, It simply redirects you to DuckDuckGo or Startpage depending on whether your search contains a !bang or not.
+            h3 Logs
+            p Here is a snippet of our logs. We don't save any queries.
+            code.privacy 127.0.0.2 - - [22/Jun/2018:16:56:25 +0000] "GET / HTTP/2.0" 200 2772 "" ""
+            code.privacy 127.0.0.2 - - [22/Jun/2018:16:56:25 +0000] "GET /js/material.min.js HTTP/2.0" 200 11582 "" ""
+            code.privacy 127.0.0.2 - - [22/Jun/2018:16:56:28 +0000] "GET /favicon.ico HTTP/2.0" 200 773 "" ""
+            code.privacy 127.0.0.2 - - [22/Jun/2018:16:56:28 +0000] "GET /opensearch.xml HTTP/2.0" 200 583 "" ""
+            code.privacy ::2 - - [22/Jun/2018:17:05:21 +0000] "POST / HTTP/2.0" 302 188 "" ""
+            code.privacy 127.0.0.2 - - [22/Jun/2018:17:06:37 +0000] "GET /?query=" 307 173 "" ""
+            code.privacy 127.0.0.2 - - [22/Jun/2018:17:15:27 +0000] "GET /?query=" 307 173 "" ""
+            code.privacy 127.0.0.2 - - [22/Jun/2018:17:15:36 +0000] "GET /?query=" 307 177 "" ""
+            code.privacy 127.0.0.2 - - [22/Jun/2018:17:16:10 +0000] "POST / HTTP/2.0" 302 142 "" ""
+            code.privacy 127.0.0.2 - - [22/Jun/2018:17:17:43 +0000] "GET / HTTP/2.0" 200 2772 "" ""
+            code.privacy 127.0.0.2 - - [22/Jun/2018:17:17:45 +0000] "GET /js/material.min.js HTTP/2.0" 200 11582 "" ""
+            code.privacy 127.0.0.2 - - [22/Jun/2018:17:17:47 +0000] "GET /opensearch.xml HTTP/2.0" 200 583 "" ""
+            code.privacy 127.0.0.2 - - [22/Jun/2018:17:17:48 +0000] "GET /favicon.ico HTTP/2.0" 200 773 "" ""
+            code.privacy 127.0.0.2 - - [22/Jun/2018:17:22:13 +0000] "POST / HTTP/2.0" 307 127 "" ""
+            code.privacy 127.0.0.2 - - [22/Jun/2018:17:22:34 +0000] "GET / HTTP/1.1" 200 7252 "" ""
+            code.privacy 127.0.0.2 - - [22/Jun/2018:17:23:04 +0000] "GET / HTTP/1.1" 200 7252 "" "Bot"
+            code.privacy 127.0.0.2 - - [22/Jun/2018:17:24:12 +0000] "GET /?query=" 307 203 "" ""
+            p
+            p The source code for this is available <a href="https://github.com/mikecrittenden/duckduckgoog">here</a> on GitHub so you're free to take a look or even host your own version if you'd like.
+            p The random part of the URL that appears when you search on Startpage sometimes is to prevent links clicked on in the results from leaking your search query. Startpage <strong>will</strong> leak your search query if it is not submitted via a POST request. This will only affect your queries if you add DuckDuckStart to your browser.
+            p When using DuckDuckGo you will see your search query in the URL. This is <em>okay</em>. When you click on a result DuckDuckGo will redirect you through their site to prevent your "referers" from leaking your search query. <a href="https://duck.co/help/results/rduckduckgocom">DuckDuckGo explains their redirect</a>.
+            .push

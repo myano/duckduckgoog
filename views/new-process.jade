@@ -1,0 +1,23 @@
+
+doctype html
+html
+    head
+        title DuckDuckStart
+        link(rel='search', type='application/opensearchdescription+xml', href='https://duckduckstart.com/opensearch.xml', title='DuckDuckStart')
+        meta(name='description', content='DuckDuckStart lets you use DuckDuckGo for bang queries and Startpage for everything else, so you get the best of both worlds.')
+        script.
+            function focusSearch() {
+                if (document.getElementById("search-input")) {
+                    document.getElementById("search-input").focus();
+                }
+            }
+            function submitthesearch() {
+                document.forms['blah'].submit()
+            }
+    body(onload='submitthesearch()')
+        block content
+
+
+        form#search-form(name='blah', method='get', action='https://startpage.com/rth/search')
+            input(type='text', id='search-input', name='query', required, placeholder='Whatcha looking for?', value=search_query)
+            button(type='submit') Search

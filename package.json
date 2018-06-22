@@ -1,15 +1,16 @@
 {
-  "name": "duckduckgoog",
+  "name": "duckduckstart",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "start": "node app"
   },
   "dependencies": {
-    "express": "3.0.0",
+    "express": "3.0.0beta7",
     "jade": "*"
   },
   "engines": {
-    "node": "8.1.4"
+    "node": "0.8.x",
+    "npm":  "1.1.x"
   }
 }

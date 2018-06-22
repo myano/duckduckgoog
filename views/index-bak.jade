@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    #search-container
+        h1 DuckDuckStart
+        form#search-form(method='get', action='')
+            input(type='text', id='search-input', name='q', required, placeholder='Whatcha looking for?')
+            button(type='submit') Search
+        p Searches <a href="https://startpage.com/" target="_blank">Startpage</a> and !bangs <a href="https://duckduckgo.com" target="_blank">DuckDuckGo</a>. <a href="/browser">Tell your browser</a>!
+        p Follow us on <a href="https://plus.google.com/107090118130095536794" rel="publisher">Google+</a>
+    .footer_main
+        include footer

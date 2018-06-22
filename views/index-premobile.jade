@@ -1,0 +1,18 @@
+extends layout-premobile
+
+
+block content
+    // favicon.ico is by Will Clayton from flickr.com: https://www.flickr.com/photos/spool32/158300831/
+    // At time of retrieval it is licensed under CC BY 2.0: https://creativecommons.org/licenses/by/2.0/
+    #search-container
+        #search-middle
+            #search-content
+                h1 DuckDuckStart
+                form#search-form(method='POST', action='/')
+                    input(type='text', id='search-input', name='query', required, placeholder='Whatcha looking for?')
+                    button(type='submit') Search
+                p Searches <a href="https://startpage.com/" target="_blank">Startpage</a> and <a href="https://duckduckgo.com/bang" target="_blank">!bangs</a> <a href="https://duckduckgo.com/" target="_blank">DuckDuckGo</a>.
+                p <a href="/browser">Tell your browser</a>!
+                // p Why do I get an annoying prompt in certain browsers? We have some <a href="/browser_probs">Known Solutions</a>!
+    .footer_main
+        include footer
