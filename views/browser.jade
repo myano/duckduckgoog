@@ -6,6 +6,8 @@ block content
             h1 DuckDuckStart
             h3 Set your default browser search!
             hr
+            h3 Firefox
+            p Follow the instructions on <a href="https://support.mozilla.org/en-US/kb/add-or-remove-search-engine-firefox#w_add-a-search-engine">adding a search engine</a> to Firefox by Mozilla.
             h3 Chrome
             p Just by visiting the site, Chrome should have already stored it as a search engine. Just go to Chrome's search engine settings and find duckduckstart.com in that list, then click "Make Default" next to it.
             p If that didn't work try clicking 
@@ -17,25 +19,14 @@ block content
                 a(href="#", onclick="window.external.AddSearchProvider('https://duckduckstart.com/opensearch.xml');") here
             hr
 
-            h3 Firefox
-            p
-                strong Search Bar
-            p Click the little dropdown arrow in the Firefox search bar, then click "Add DuckDuckStart" to save it. You might have to click it again to make it your default.
-            p
-                strong Awesomebar
-            p Visit 
-                a(href="http://kb.mozillazine.org/Location_Bar_search#Location_Bar_search_.28external_-_search_engine.29") this page with instructions
-                |  and use the following URL as the search string (or see below if you want to use a localized Start URL):
-            code https://duckduckstart.com/?query=
-            br
-            br
-            hr
-
             h3 Other Browsers & Launchers
             p DuckDuckStart should be easy to add to any browser or launcher (Alfred, GnomeDo, etc.) that supports custom searches.
             p Just use this search string in your browser/launcher's search engine options to create a custom search:
             code https://duckduckstart.com/?query=SEARCH
+            br()
+            br()
             p (Replace SEARCH with whatever your browser/launcher expects the placeholder to be).
+            p Please note: DuckDuckStart accepts both POST and GET requests. However, POST is strongly preferred, as it prevents leaking of search queries that are sent to StartPage.
 
             hr
             h3 Using a custom search engine
